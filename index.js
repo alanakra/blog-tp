@@ -6,6 +6,18 @@ const blogRouter = require('./blog.router');
 
 const app = express();
 
+const shortid = require('shortid');
+
+console.log(shortid.generate());
+
+// const _id: {
+//     title: String,
+//     dateCreated:  { type: Date, default: Date.now },
+//     content : String,
+//     category : shortid,
+//     default: shortid.generate,
+//   };
+
 app.set('view engine','pug');
 
 app.set('views','./views');
@@ -14,6 +26,8 @@ const PORT = 9000;
 const HOST = 'localhost';
 
 app.use('/', blogRouter);
+
+app.use(express.static('./public'));
 
 // mongodb+srv://alan:<password>@cluster0-qpbs6.gcp.mongodb.net/test?retryWrites=true&w=majority
 

@@ -1,0 +1,22 @@
+extends layout.pugextends layout.pug
+ 
+block variables
+    - let title = "Modification d'article";
+ 
+block content
+    h1 Modifier l'article
+    <form>
+      <label>Titre:</label>
+      <input type="text">
+      <label></label>
+      <select>
+        <option></option>
+      </select>
+      <label>Contenu:</label>
+      <textarea></textarea>
+      <label>Auteur:</label>
+      <select>
+        <option></option>
+      </select>
+      <input type="submit", value="Envoyer">
+    </form>
